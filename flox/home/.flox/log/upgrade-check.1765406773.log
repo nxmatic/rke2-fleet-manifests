@@ -1,0 +1,19 @@
+2025-12-10T22:46:13.298676Z DEBUG flox::config: reading raw config (initialized: false, reload: false)
+2025-12-10T22:46:13.298742Z DEBUG flox::config: `$FLOX_CONFIG_DIR` set: /Users/nxmatic/.config/flox
+2025-12-10T22:46:13.298999Z DEBUG flox: set _FLOX_PKGDB_VERBOSITY=2
+2025-12-10T22:46:13.299539Z DEBUG flox::config: reading raw config (initialized: true, reload: false)
+2025-12-10T22:46:13.299783Z DEBUG flox::commands: Skipping update check in development mode
+2025-12-10T22:46:13.299895Z DEBUG flox::commands: Metrics collection disabled
+2025-12-10T22:46:13.299951Z DEBUG flox::utils::init::catalog_client: using catalog client with url: https://api.flox.dev
+2025-12-10T22:46:13.301639Z DEBUG flox::commands: feature flags configured=Features { upload: false, qa: false }
+2025-12-10T22:46:13.301683Z DEBUG check-upgrade: flox::utils::metrics: No metrics client setup, skipping record
+2025-12-10T22:46:13.301863Z DEBUG check-upgrade: flox_rust_sdk::models::environment: detected concrete environment type: path
+2025-12-10T22:46:13.302048Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: created unlocked upgrade information guard upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/home/.flox/cache/upgrade-checks.json"
+2025-12-10T22:46:13.302091Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: lock acquired upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/home/.flox/cache/upgrade-checks.json"
+2025-12-10T22:46:13.302129Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: upgrading to_upgrade=""
+❌ ERROR: Failed to parse manifest:
+
+invalid escape sequence
+expected `b`, `f`, `n`, `r`, `t`, `u`, `U`, `\`, `"`
+
+2025-12-10T22:46:13.302485Z DEBUG flox::utils::metrics: No metrics client setup, skipping flush

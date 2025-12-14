@@ -1,13 +1,15 @@
 SHELL ?= bash
-.SHELLFLAGS := -euo pipefail -c
+.SHELLFLAGS := -exuo pipefail -c
 
-PACKAGES := porch porch-resources replicator flux-operator tekton-pipelines traefik cilium
+.ONESHELL:
+
+PACKAGES := $(notdir $(wildcard packages/*))
 CLUSTER ?= default
 
 .PHONY: render sync-packages clean-manifests clean-rendered
 
 render:
-	./render.sh $(CLUSTER)
+	./render.sh $(CLUSTER) $(PACKAGES)
 
 sync-packages:
 	@for pkg in $(PACKAGES); do \

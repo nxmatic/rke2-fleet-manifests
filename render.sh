@@ -1,19 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cluster="${1:-default}"
+cluster="${1}"
+packages=("${@:2}")
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)"
 cd "${repo_root}"
-
-packages=(
-  porch
-  porch-resources
-  replicator
-  flux-operator
-  tekton-pipelines
-  traefik
-  cilium
-)
 
 packages_dir="${repo_root}/packages"
 rendered_dir="${repo_root}/rendered"
